@@ -1,5 +1,6 @@
 import random, time, json, os, sys
 from game.py import game
+from lead.py import showLeaderboard
 
 def delay(sec):
     time.sleep(sec)
