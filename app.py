@@ -1,4 +1,5 @@
 import random, time, json, os, sys
+from game.py import game
 
 def delay(sec):
     time.sleep(sec)
@@ -36,11 +37,31 @@ class App:
                 delay(1.25)
                 print("However, the moment you get one wrong, everything is over, and you'll have to restart!")
                 choice = input("Press enter to continue...")
-        while choice != 1 or 2 or 3 or 4:
-            os.system('clear')
-            print("--==[ Menu ]==--")
-            print("----------------")
-            print("--==[ Game ]==--")
-            print("--==[Thanks]==--")
-            print(" --==[ HSL ]==--")
-            
+                with json.load(open("player.json", 'w')) as pf:
+                    self.player.hasPlayed == True
+                    pf.hasPlayed == self.hasPlayed
+                    json.dump(pf)
+        os.system('clear')
+        print("   --==[ Menu ]==--")
+        print("   ----------------")
+        print("1) --==[ Game ]==--")
+        print("2) --==[Thanks]==--")
+        print("3) --==[ High ]==--")
+        print("4) --==[ Exit ]==--")
+        while choice != '1' or '2' or '3' or '4':
+            choice = input("Please select an option:\n>>> ")
+            if choice != '1' or '2' or '3' or '4':
+                print("That's not a valid option! Please enter 1, 2, 3, or 4!")
+        if choice == '1':
+            while quit != True:
+                game()
+        elif choice == '2':
+            credits()
+        elif choice == '3':
+            showLeaderboard(file)
+        elif choice == '4':
+            print("See you later!")
+            sys.exit()
+    def credits():
+        print("This game was created entirely by @simplesentai (on GitHub).")
+        launch()
