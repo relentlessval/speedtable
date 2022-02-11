@@ -1,6 +1,5 @@
-import random, time, json, os, sys
+import time, sys
 from game.py import game
-from lead.py import showLeaderboard
 
 def delay(sec):
     time.sleep(sec)
@@ -26,20 +25,17 @@ def launch():
     print("   ----------------")
     print("1) --==[ Game ]==--")
     print("2) --==[Thanks]==--")
-    print("3) --==[ High ]==--")
-    print("4) --==[ Exit ]==--")
-    while choice != '1' or '2' or '3' or '4':
+    print("3) --==[ Exit ]==--")
+    while choice != '1' or '2' or '3':
         choice = input("Please select an option:\n>>> ")
-        if choice != '1' or '2' or '3' or '4':
-            print("That's not a valid option! Please enter 1, 2, 3, or 4!")
+        if choice != '1' or '2' or '3':
+            print("That's not a valid option! Please enter 1, 2, or 3!")
     if choice == '1':
         while quit != True:
             game()
     elif choice == '2':
         credits()
     elif choice == '3':
-        showLeaderboard(file)
-    elif choice == '4':
         print("See you later!")
         sys.exit()
 def credits():
