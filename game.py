@@ -1,26 +1,34 @@
-import random
+import random, sys
 from datetime import datetime
 
-print("Game Start!")
-start = input("Ready? (yes or no) ")
-if start.lower == "yes":
-    score = 0
-    while missedQuestion == False:
-        question = {
-            "factors": [],
-            "ans": 0,
-            "playerAns": 0
-        }
-        question.factors.append(random.randint(0,12))
-        question.factors.append(random.randint(0,12))
-        question.update({"ans": factors[0] + factors[1]})
-        presentQuestion = datetime.now()
-        print("   "+question.factors[0])
-        print(" x "+question.factors[1])
-        print("--------")
-        question.update({"playerAns": int(input())})
-        if question.playerAns == question.ans:
-            guessRight = datetime.now()
-            result = guessRight - presentQUestion
-            if result < 5000:
-                score = score + 1
+def game():
+    print("Game Start!")
+    start = input("Ready? (yes or no) ")
+    if start.lower() == "yes":
+        missedQuestion = False
+        while missedQuestion == False:
+            # base framework for questions
+            factors = []
+            ans = 0
+            playerAns = 0
+            factors.append(random.randint(0,12))
+            factors.append(random.randint(0,12))
+            ans = factors[0] * factors[1]
+            presentQuestion = datetime.now()
+            print("   "+str(factors[0]))
+            print(" x "+str(factors[1]))
+            print("--------")
+            playerAns = int(input())
+            if playerAns == ans:
+                guessRight = datetime.now()
+                result = guessRight - presentQuestion
+                print(str(result.seconds)+"s")
+                print("Correct!")
+            elif playerAns != ans:
+                missedQuestion = True
+                print("Incorrect!")
+                print("The answer was "+str(ans))
+                print("Game Over!")
+                print("Thanks for playing!")
+                sys.exit()
+

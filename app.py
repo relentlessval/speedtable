@@ -1,5 +1,5 @@
-import time, sys
-from game.py import game
+import time, sys, os
+from game import game
 
 def delay(sec):
     time.sleep(sec)
@@ -26,18 +26,20 @@ def launch():
     print("1) --==[ Game ]==--")
     print("2) --==[Thanks]==--")
     print("3) --==[ Exit ]==--")
-    while choice != '1' or '2' or '3':
-        choice = input("Please select an option:\n>>> ")
-        if choice != '1' or '2' or '3':
+    while choice != 1 and choice != 2 and choice != 3:
+        choice = int(input("Please select an option:\n>>> "))
+        if choice != 1 and choice != 2 and choice != 3:
             print("That's not a valid option! Please enter 1, 2, or 3!")
-    if choice == '1':
+    if choice == 1:
         while quit != True:
             game()
-    elif choice == '2':
+    elif choice == 2:
         credits()
-    elif choice == '3':
+    elif choice == 3:
         print("See you later!")
         sys.exit()
 def credits():
     print("This game was created entirely by @simplesentai (on GitHub).")
     launch()
+
+launch()
