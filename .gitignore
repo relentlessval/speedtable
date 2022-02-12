@@ -1,0 +1,5 @@
+# file for building .exe
+build.py
+
+# dist folder after building .exe
+dist
