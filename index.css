@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Prompt:wght@200;300;400&family=Source+Code+Pro:wght@200;300;400&display=swap");
+.main {
+  margin: left 10px, right 10px;
+}
+.main .jp {
+  font-family: "Noto Sans JP", sans-serif;
+}
+.main .en {
+  font-family: "Prompt", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #6495ed;
+}
+
+.navbar {
+  font-size: 65px;
+}
+
+/*# sourceMappingURL=index.css.map */
