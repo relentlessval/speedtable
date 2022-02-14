@@ -6,11 +6,13 @@
     
     .jp {
         font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 300;
 
     }
 
     .en {
         font-family: 'Prompt', sans-serif;
+        font-weight: 300;
     }
     
     margin: left 10px, right 10px;
@@ -30,4 +32,5 @@ body {
 .navbar {
     font-size: 65px;
     font-family: 'Prompt', sans-serif;
+    font-weight: 300;
 }
