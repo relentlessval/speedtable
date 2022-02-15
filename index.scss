@@ -1,21 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Prompt:wght@200;300;400&family=Source+Code+Pro:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Prompt:wght@200;300;400&family=Source+Code+Pro:wght@200;300;400');
 
 
 // ⇧
-.main {
+.main-en {
     
-    .jp {
-        font-family: 'Noto Sans JP', sans-serif;
-        font-weight: 300;
-
-    }
-
-    .en {
-        font-family: 'Prompt', sans-serif;
-        font-weight: 300;
-    }
-    
-    margin: left 10px, right 10px;
+    font-family: "Prompt";
+    background-color: #64edd6;
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 
@@ -30,7 +22,27 @@ body {
 }
 
 .navbar {
-    font-size: 65px;
+    font-size: 35px;
     font-family: 'Prompt', sans-serif;
     font-weight: 300;
+    color: #fff;
+    background-color: black;
+}
+
+.language {
+
+    .en {
+        font-family: 'Prompt', sans-serif;
+        font-weight: 300;
+    }
+
+    .jp {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 300;
+    }
+
+    .es {
+        font-family: 'Prompt', sans-serif;
+        font-weight: 300;
+    }
 }
